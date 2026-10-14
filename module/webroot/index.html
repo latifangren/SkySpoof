@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SkySpoof Profiles</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <p class="eyebrow">SKYSPOOF 0.3</p>
+      <h1>Device profiles</h1>
+      <p class="muted">Offline editor. It never sends configuration over the network.</p>
+    </header>
+
+    <section class="card">
+      <h2>Profile</h2>
+      <div class="grid">
+        <label>Device catalog <select id="deviceCatalog"><option value="">Custom profile</option><option value="pixel_7_pro">Pixel 7 Pro</option><option value="pixel_8_pro">Pixel 8 Pro</option><option value="pixel_9_pro">Pixel 9 Pro</option></select></label>
+        <label>Profile name <input id="profileName" value="pixel_fold" maxlength="64"></label>
+        <label>Package mapping <input id="packageName" placeholder="com.example.app"></label>
+      </div>
+      <div class="grid">
+        <label>Brand <input data-field="BRAND" value="google"></label>
+        <label>Manufacturer <input data-field="MANUFACTURER" value="Google"></label>
+        <label>Model <input data-field="MODEL" value="Pixel 9 Pro Fold"></label>
+        <label>Device <input data-field="DEVICE" value="comet"></label>
+        <label>Product <input data-field="PRODUCT" value="comet_beta"></label>
+        <label>Fingerprint <input data-field="FINGERPRINT" value="google/comet_beta/comet:16/CANARY/ZP11.260918.007/16484274:user/release-keys"></label>
+        <label>Android release <input data-field="RELEASE" value="16"></label>
+        <label>SDK int <input data-field="SDK_INT" value="36" inputmode="numeric"></label>
+      </div>
+      <div class="actions">
+        <button id="validate">Validate</button>
+        <button id="download" class="primary">Download JSON</button>
+        <button id="reset" class="ghost">Reset</button>
+      </div>
+      <pre id="status" aria-live="polite">Ready.</pre>
+    </section>
+
+    <section class="card notice">
+      <h2>Scope</h2>
+      <p>Build profile compatibility only. No controls for telecom identifiers, DRM keyboxes, attestation, anti-cheat, or third-party licenses.</p>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

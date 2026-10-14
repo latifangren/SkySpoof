@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SkySpoof safe device-profile configuration",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "packages": {
+      "type": "array",
+      "items": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_]*(\\.[A-Za-z][A-Za-z0-9_]*)+$"},
+      "uniqueItems": true
+    },
+    "default_profile": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,63}$"},
+    "package_profiles": {
+      "type": "object",
+      "additionalProperties": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,63}$"}
+    },
+    "profiles": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["build"],
+        "additionalProperties": false,
+        "properties": {"build": {"type": "object"}}
+      }
+    },
+    "build": {"type": "object"}
+  }
+}

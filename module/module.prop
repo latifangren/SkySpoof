@@ -1,0 +1,7 @@
+id=SkySpoof
+name=SkySpoof - Open Device Profile
+version=0.3.0
+versionCode=3
+author=Skyla AI
+description=Original open-source Android device profile module with offline WebUI and rollback.
+minMagisk=20.4

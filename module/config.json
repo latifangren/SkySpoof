@@ -1,0 +1,28 @@
+{
+  "packages": [],
+  "global_system_server": false,
+  "default_profile": "pixel_fold",
+  "package_profiles": {},
+  "profiles": {
+    "pixel_fold": {
+      "build": {
+        "BRAND": "google",
+        "MANUFACTURER": "Google",
+        "MODEL": "Pixel 9 Pro Fold",
+        "DEVICE": "comet",
+        "PRODUCT": "comet_beta",
+        "FINGERPRINT": "google/comet_beta/comet:16/CANARY/ZP11.260918.007/16484274:user/release-keys",
+        "BOARD": "comet",
+        "HARDWARE": "comet",
+        "ID": "ZP11.260918.007",
+        "DISPLAY": "ZP11.260918.007",
+        "TAGS": "release-keys",
+        "TYPE": "user",
+        "USER": "android-build",
+        "RELEASE": "16",
+        "CODENAME": "REL",
+        "SDK_INT": "36"
+      }
+    }
+  }
+}

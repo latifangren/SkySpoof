@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 3.21)
+project(SkySpoof)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+add_compile_options(-Os -ffunction-sections -fdata-sections -fvisibility=hidden)
+add_link_options(-Wl,--gc-sections -Wl,--exclude-libs,ALL)
+find_library(log-lib log)
+
+add_library(skyspoof SHARED spoof_module.cpp)
+target_include_directories(skyspoof PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+target_link_libraries(skyspoof ${log-lib})
+
+add_executable(skyspoofctl configctl.cpp)
+target_include_directories(skyspoofctl PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+target_link_options(skyspoofctl PRIVATE -static-libstdc++)

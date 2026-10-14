@@ -1,0 +1,4 @@
+#!/system/bin/sh
+umask 022
+ui_print "SkySpoof: use Magisk/KernelSU module installer"
+exit 0
