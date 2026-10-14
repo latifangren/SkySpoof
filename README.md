@@ -4,6 +4,7 @@ Original open-source Zygisk device-profile module.
 
 ## Version 0.3.0
 
+- Documentation: [`docs/REA-ANALYSIS.md`](docs/REA-ANALYSIS.md)
 - Device catalog imported from DeviceSpoofLab-Magisk (`module/devices.conf`)
 - Offline WebUI profile editor in `webroot/`
 - Catalog presets for Pixel 7/8/9 Pro
